@@ -1,3 +1,7 @@
+# rails-gitlab-runner
+
+Docker image for headless Chrome testing with Selenium WebDriver.
+
 A Docker image with:
 
 - Ruby 2.4
