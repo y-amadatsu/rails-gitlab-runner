@@ -1,4 +1,4 @@
-FROM ruby:2.4
+FROM ruby:2.6.1
 RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
 RUN \
     apt-get update && \
@@ -9,9 +9,9 @@ RUN \
         postgresql-client \
         sqlite3 \
         --no-install-recommends && rm -rf /var/lib/apt/lists/*
-ENV RAILS_VERSION 5.1.6
+ENV RAILS_VERSION 5.2.2
 RUN gem install rails --version "$RAILS_VERSION"
-ENV CHROMEDRIVER_VERSION 2.38
+ENV CHROMEDRIVER_VERSION 2.46
 RUN \
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     wget http://chromedriver.storage.googleapis.com/"$CHROMEDRIVER_VERSION"/chromedriver_linux64.zip && \
