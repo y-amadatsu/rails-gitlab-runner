@@ -4,13 +4,14 @@ Docker image for headless Chrome testing with Selenium WebDriver.
 
 A Docker image with:
 
-- Ruby 2.4
-- Rails 5.1.6
-- Chromedriver 2.38
+- Ruby 2.6.1
+- Rails 5.2.2
+- Chromedriver 75.0.3770.8
 
 ## Example .gitlab-ci.yml
 
 ```
+
 stages:
   - test
 
@@ -50,4 +51,5 @@ rspec:
   script:
     - rails db:setup
     - SIMPLECOV=1 bundle exec rspec
+
 ```
