@@ -15,7 +15,7 @@ RUN \
         --no-install-recommends && rm -rf /var/lib/apt/lists/*
 ENV RAILS_VERSION 5.2.2
 RUN gem install rails --version "$RAILS_VERSION"
-ENV CHROMEDRIVER_VERSION 2.46
+ENV CHROMEDRIVER_VERSION 75.0.3770.8
 RUN \
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     wget http://chromedriver.storage.googleapis.com/"$CHROMEDRIVER_VERSION"/chromedriver_linux64.zip && \
